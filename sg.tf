@@ -1,14 +1,6 @@
 resource "aws_security_group" "kroton-ssh-http" {
   name        = "kroton-ssh-http"
-  description = "allow ssh and http traffic"
-
-  ingress {
-    from_port   = 22
-    to_port     = 22
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-
+  description = "allow http traffic"
 
   ingress {
     from_port   = 80
